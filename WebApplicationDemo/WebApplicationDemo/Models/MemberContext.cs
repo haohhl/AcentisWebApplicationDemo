@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebApplicationDemo.Models
 {
-    public class UserContext : DbContext
+    public class ApplicationContext : DbContext
     {
-        public UserContext(DbContextOptions<UserContext> options):base(options)
+        public ApplicationContext(DbContextOptions<ApplicationContext> options):base(options)
         {
             
         }
         
-        public DbSet<UserModel> Users { get; set; }
+        public DbSet<MemberModel> Members { get; set; }
     }
 }

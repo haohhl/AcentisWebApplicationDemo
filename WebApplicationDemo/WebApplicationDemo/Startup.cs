@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using WebApplicationDemo.Models;
+using WebApplicationDemo.Repository;
 using WebApplicationDemo.Services;
 
 namespace WebApplicationDemo
@@ -56,9 +57,11 @@ namespace WebApplicationDemo
                 ValidateAudience = false
             };
 
-            services.AddDbContext<UserContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
             services.AddScoped<IAuthenticationService, AuthenticationService>();
-            services.AddScoped<IUserManagementService, UserManagementService>(); 
+            services.AddScoped<IMemberManagementService, MemberManagementService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

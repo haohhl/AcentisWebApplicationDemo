@@ -8,20 +8,25 @@ using WebApplicationDemo.Models;
 
 namespace WebApplicationDemo.Services
 {
+    public interface IAuthenticationService
+    {
+        bool IsAuthenticated(MemberModel request, out string token);
+    }
+
     public class AuthenticationService : IAuthenticationService
     {
-        private readonly IUserManagementService _userManagementService;
+        private readonly IMemberManagementService _memberManagementService;
         private readonly TokenManagement _tokenManagement;
 
-        public AuthenticationService(IUserManagementService userManagementService, IOptions<TokenManagement> tokenManagement)
+        public AuthenticationService(IMemberManagementService memberManagementService, IOptions<TokenManagement> tokenManagement)
         {
-            _userManagementService = userManagementService;
+            _memberManagementService = memberManagementService;
             _tokenManagement = tokenManagement.Value;
         }
-        public bool IsAuthenticated(UserModel request, out string token)
+        public bool IsAuthenticated(MemberModel request, out string token)
         {
             token = string.Empty;
-            if (!_userManagementService.IsValidUser(request.Email, request.Password)) return false;
+            if (!_memberManagementService.IsValidMember(request.Email, request.Password)) return false;
             var claim = new[]
             {
                 new Claim(ClaimTypes.Email, request.Email)

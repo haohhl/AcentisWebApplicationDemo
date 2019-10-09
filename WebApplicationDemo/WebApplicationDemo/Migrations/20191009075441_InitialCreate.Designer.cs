@@ -9,8 +9,8 @@ using WebApplicationDemo.Models;
 
 namespace WebApplicationDemo.Migrations
 {
-    [DbContext(typeof(UserContext))]
-    [Migration("20191008091309_InitialCreate")]
+    [DbContext(typeof(ApplicationContext))]
+    [Migration("20191009075441_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace WebApplicationDemo.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("WebApplicationDemo.Models.UserModel", b =>
+            modelBuilder.Entity("WebApplicationDemo.Models.MemberModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -55,7 +55,7 @@ namespace WebApplicationDemo.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Members");
                 });
 #pragma warning restore 612, 618
         }

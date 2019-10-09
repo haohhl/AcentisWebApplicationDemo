@@ -25,7 +25,7 @@ namespace WebApplicationDemo.Controllers
 
         [AllowAnonymous]
         [HttpPost, Route("request")]
-        public ActionResult RequestToken([FromBody] UserModel request)
+        public ActionResult RequestToken([FromBody] MemberModel request)
         {
             if (!ModelState.IsValid)
             {

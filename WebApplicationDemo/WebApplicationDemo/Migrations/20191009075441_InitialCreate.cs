@@ -9,7 +9,7 @@ namespace WebApplicationDemo.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "Members",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -24,14 +24,14 @@ namespace WebApplicationDemo.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Members", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Members");
         }
     }
 }

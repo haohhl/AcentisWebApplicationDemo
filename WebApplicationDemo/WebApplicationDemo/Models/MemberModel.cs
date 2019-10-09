@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace WebApplicationDemo.Models
 {
-    public class UserModel
+    public class MemberModel
     {
         [Required]
         [Key]
