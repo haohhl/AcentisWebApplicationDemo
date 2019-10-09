@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebApplicationDemo.Models;
 
@@ -21,13 +19,13 @@ namespace WebApplicationDemo.Repository
         private readonly DbSet<T> _dbSet;
         public Repository(ApplicationContext dbContext)
         {
-            this._dbContext = dbContext;
-            this._dbSet = this._dbContext.Set<T>();
+            _dbContext = dbContext;
+            _dbSet = _dbContext.Set<T>();
         }
         
         public IEnumerable<T> GetAll()
         {
-            return this._dbSet.ToList();
+            return _dbSet.ToList();
         }
 
         public T GetById(int id)
@@ -37,18 +35,18 @@ namespace WebApplicationDemo.Repository
 
         public void Add(T entity)
         {
-            this._dbSet.Add(entity);
+            _dbSet.Add(entity);
         }
 
         public void Update(T entity)
         {
-            this._dbSet.Attach(entity);
-            this._dbContext.Entry(entity).State = EntityState.Modified;
+            _dbSet.Attach(entity);
+            _dbContext.Entry(entity).State = EntityState.Modified;
         }
 
         public void Delete(T entity)
         {
-            this._dbSet.Remove(entity);
+            _dbSet.Remove(entity);
         }
     }
 }

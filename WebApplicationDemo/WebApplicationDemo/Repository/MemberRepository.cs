@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using WebApplicationDemo.Models;
 
 namespace WebApplicationDemo.Repository
@@ -23,7 +19,7 @@ namespace WebApplicationDemo.Repository
 
         public IEnumerable<MemberModel> FindMemberByEmail(string email)
         {
-            return (from m in this._dbContext.Members where m.Email.Equals(email) select m);
+            return (from m in _dbContext.Members where m.Email.Equals(email) select m);
         }
 
     }

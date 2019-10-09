@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebApplicationDemo.Models;
 
@@ -19,17 +17,17 @@ namespace WebApplicationDemo.Repository
         public UnitOfWork(ApplicationContext dbContext)
         {
             _dbContext = dbContext;
-            this.MemberRepository = new MemberRepository(this._dbContext);
+            MemberRepository = new MemberRepository(_dbContext);
         }
         
         public async Task Commit()
         {
-            await this._dbContext.SaveChangesAsync();
+            await _dbContext.SaveChangesAsync();
         }
 
         public void Dispose()
         {
-            this._dbContext.Dispose();
+            _dbContext.Dispose();
         }
     }
 }
