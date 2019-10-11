@@ -15,7 +15,7 @@ namespace WebApplicationDemo.Services
     {
         bool IsMemberExist(int id);
         Task AddMemberAsync(MemberModel member);
-        Task<MemberModel> FindMemberByEmail(string email);
+        Task<MemberModel> FindMemberByEmailAsync(string email);
         Task UpdateMemberAsync(MemberModel member);
         Task<MemberModel> AuthenticatedMember(string memberLoginEmail, string memberLoginPassword);
     }
@@ -40,7 +40,7 @@ namespace WebApplicationDemo.Services
             await _unitOfWork.Commit();
         }
 
-        public async Task<MemberModel> FindMemberByEmail(string email)
+        public async Task<MemberModel> FindMemberByEmailAsync(string email)
         {
             var result = await _unitOfWork.MemberRepository.FindMemberByEmail(email);
             if (result != null)

@@ -24,7 +24,8 @@ namespace WebApplicationDemo.Repository
         {
             try
             {
-                return await _dbContext.Members.FirstOrDefaultAsync(x => x.Email.Equals(email));
+                var response = _dbContext.Members.FirstOrDefault(x => x.Email.Equals(email));
+                return await Task.Run(() => response);
             }
             catch (Exception e)
             {

@@ -12965,11 +12965,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vdhao.LDAP\\Desktop\\AcentisWebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo.csproj",
+      "projectUniqueName": "C:\\Users\\vdhao.LDAP\\source\\repos\\AcentisWebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo.csproj",
       "projectName": "WebApplicationDemo",
-      "projectPath": "C:\\Users\\vdhao.LDAP\\Desktop\\AcentisWebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo.csproj",
+      "projectPath": "C:\\Users\\vdhao.LDAP\\source\\repos\\AcentisWebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo.csproj",
       "packagesPath": "C:\\Users\\vdhao.LDAP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vdhao.LDAP\\Desktop\\AcentisWebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo\\obj\\",
+      "outputPath": "C:\\Users\\vdhao.LDAP\\source\\repos\\AcentisWebApplicationDemo\\WebApplicationDemo\\WebApplicationDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

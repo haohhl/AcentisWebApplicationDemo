@@ -46,9 +46,10 @@ namespace WebApplicationDemo.Controllers
         //[HttpGet("{email}", Name = "Get")]
         [Authorize]
         [Route("profile")]
-        public ActionResult GetDetail(string email) 
+        public async Task<ActionResult> GetDetail(string email)
         {
-            return new JsonResult( _memberManagementService.FindMemberByEmail(email));
+            var response = await _memberManagementService.FindMemberByEmailAsync(email);
+            return new JsonResult(response);
         }
 
         [HttpPost]
