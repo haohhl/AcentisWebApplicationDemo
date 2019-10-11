@@ -25,7 +25,7 @@ namespace WebApplicationDemo.Controllers
             var user = await _memberManagementService.AuthenticatedMember(memberLogin.Email, memberLogin.Password);
 
             if (user == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
+                return BadRequest(new { message = "Username or password is wrong" });
 
             return Ok(user);
         }
