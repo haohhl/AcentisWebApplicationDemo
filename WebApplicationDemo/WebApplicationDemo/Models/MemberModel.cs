@@ -8,8 +8,7 @@ namespace WebApplicationDemo.Models
 {
     public class MemberModel
     {
-        [Required]
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Column(TypeName = "nvarchar(255)")]
@@ -19,6 +18,7 @@ namespace WebApplicationDemo.Models
         [Column(TypeName = "varchar(200)")]
         [JsonProperty("email")]
         [Required(ErrorMessage = "Email is required")]
+        [Key]
         public string Email { get; set; }
 
         [Column(TypeName = "varchar(200)")]
@@ -43,5 +43,7 @@ namespace WebApplicationDemo.Models
         [Column(TypeName = "varchar(200)")]
         [DisplayName("Email Opt-In")]
         public string EmailOptIn { get; set; }
+
+        public string Token { get; set; }
     }
 }

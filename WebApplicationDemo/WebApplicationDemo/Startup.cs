@@ -44,8 +44,8 @@ namespace WebApplicationDemo
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(token.Secret)),
                     ValidIssuer = token.Issuer,
                     ValidAudience = token.Audience,
-                    ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateIssuer = true,
+                    ValidateAudience = true
                 };
             });
 
@@ -58,7 +58,6 @@ namespace WebApplicationDemo
             };
 
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
-            services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IMemberManagementService, MemberManagementService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

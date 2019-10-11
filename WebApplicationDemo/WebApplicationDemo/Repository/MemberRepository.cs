@@ -1,12 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using WebApplicationDemo.Models;
 
 namespace WebApplicationDemo.Repository
 {
     public interface IMemberRepository
     {
-        IEnumerable<MemberModel> FindMemberByEmail(string email);
+        Task<MemberModel> FindMemberByEmail(string email);
     }
 
     public class MemberRepository : Repository<MemberModel>, IMemberRepository
@@ -17,9 +20,18 @@ namespace WebApplicationDemo.Repository
             _dbContext = dbContext;
         }
 
-        public IEnumerable<MemberModel> FindMemberByEmail(string email)
+        public async Task<MemberModel> FindMemberByEmail(string email)
         {
-            return (from m in _dbContext.Members where m.Email.Equals(email) select m);
+            try
+            {
+                return await _dbContext.Members.FirstOrDefaultAsync(x => x.Email.Equals(email));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
 
     }

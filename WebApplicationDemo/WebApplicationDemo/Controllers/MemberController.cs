@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplicationDemo.Models;
@@ -17,6 +18,18 @@ namespace WebApplicationDemo.Controllers
             _memberManagementService = memberManagementService;
         }
 
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public async Task<IActionResult> MemberLogin([FromBody] MemberLogin memberLogin)
+        {
+            var user = await _memberManagementService.AuthenticatedMember(memberLogin.Email, memberLogin.Password);
+
+            if (user == null)
+                return BadRequest(new { message = "Username or password is incorrect" });
+
+            return Ok(user);
+        }
+
         [HttpPost]
         [AllowAnonymous]
         [Route("register")]
@@ -31,15 +44,15 @@ namespace WebApplicationDemo.Controllers
         }
 
         //[HttpGet("{email}", Name = "Get")]
-        [AllowAnonymous]
-        [Route("Profile")]
+        [Authorize]
+        [Route("profile")]
         public ActionResult GetDetail(string email) 
         {
             return new JsonResult( _memberManagementService.FindMemberByEmail(email));
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize]
         [Route("update")]
         public async Task<ActionResult<MemberModel>> UpdaterMember(MemberModel member)
         {
@@ -50,5 +63,15 @@ namespace WebApplicationDemo.Controllers
             }
             return BadRequest("Invalid Request");
         }
+    }
+
+    public class MemberLogin
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        public string Password { get; set; }
     }
 }

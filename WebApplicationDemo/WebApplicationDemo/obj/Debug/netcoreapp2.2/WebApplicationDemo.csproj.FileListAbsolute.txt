@@ -26,3 +26,17 @@ C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\WebApplicationDemo\We
 C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.RazorTargetAssemblyInfo.cache
 C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.dll
 C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.pdb
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\bin\Debug\netcoreapp2.2\WebApplicationDemo.deps.json
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\bin\Debug\netcoreapp2.2\WebApplicationDemo.runtimeconfig.json
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\bin\Debug\netcoreapp2.2\WebApplicationDemo.runtimeconfig.dev.json
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\bin\Debug\netcoreapp2.2\WebApplicationDemo.dll
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\bin\Debug\netcoreapp2.2\WebApplicationDemo.pdb
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.csprojAssemblyReference.cache
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.csproj.CoreCompileInputs.cache
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.RazorAssemblyInfo.cache
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.RazorAssemblyInfo.cs
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.AssemblyInfoInputs.cache
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.AssemblyInfo.cs
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.RazorTargetAssemblyInfo.cache
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.dll
+C:\Users\vdhao.LDAP\source\repos\AcentisWebApplicationDemo\AcentisWebApplicationDemo\WebApplicationDemo\WebApplicationDemo\obj\Debug\netcoreapp2.2\WebApplicationDemo.pdb

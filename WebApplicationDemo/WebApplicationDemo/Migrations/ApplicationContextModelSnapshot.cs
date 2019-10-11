@@ -21,16 +21,12 @@ namespace WebApplicationDemo.Migrations
 
             modelBuilder.Entity("WebApplicationDemo.Models.MemberModel", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Email")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("varchar(200)");
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("DateTime");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
 
                     b.Property<string>("EmailOptIn")
                         .HasColumnType("varchar(200)");
@@ -38,6 +34,10 @@ namespace WebApplicationDemo.Migrations
                     b.Property<string>("Gender")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
+
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("MobileNumber")
                         .IsRequired()
@@ -51,7 +51,9 @@ namespace WebApplicationDemo.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(200)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Token");
+
+                    b.HasKey("Email");
 
                     b.ToTable("Members");
                 });
