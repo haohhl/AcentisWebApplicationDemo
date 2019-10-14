@@ -50,6 +50,6 @@ Open Solution in Visual Studio
 `}`
 
 **Notice:** Program is not perfect for all test  case like: Check exist user, Show error message, ...
-So sorry about inconvenient I will fix next version. 
+So sorry about this inconvenient I will fix next version. 
 Thanks you and Best Regards, 
 VDHAO.
